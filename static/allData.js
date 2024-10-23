@@ -7,7 +7,8 @@ const resultArea = document.getElementById("result");
 selectBox.addEventListener("change", () => {
   // 何月が選択されたかを判定
   const option = selectBox.options[selectBox.selectedIndex];
-  const selectedMonth = option.getAttribute("data-month"); // 全データが入ったリストから選択された月のデータを探す
+  const selectedMonth = option.getAttribute("data-month");
+  // 全データが入ったリストから選択された月のデータを探す
   dataList.map((data) => {
     if (data.month == selectedMonth) {
       // 見つかったらrenderHTML関数を呼んで画面を再描画する
