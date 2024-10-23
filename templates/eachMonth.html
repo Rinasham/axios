@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="date">
+      {% for month in range(1,4) %}
+      <option value="{{ month }}" data-month="{{month}}">{{ month }}月</option>
+      {% endfor %}
+    </select>
+    <div id="result">
+      <p>{{data.month}}月</p>
+      <p>{{data.fruits[0]}}</p>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../static/eachMonth.js"></script>
+  </body>
+</html>
